@@ -14,6 +14,10 @@ Commands M-x `TAB To auto comlitej`
     $>eshell --> Emacs Shell (Terminal)
     $>tetris
 
+Store
+$>list-packages
+MELPA
+
 Major Mode (Local Mode) (Settings for One Buffer)
     $>hl-line-mode
 Minor Mode (Global Mode) (Settings for All Buffer)
